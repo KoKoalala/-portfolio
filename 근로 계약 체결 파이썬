@@ -1,0 +1,14 @@
+age = int(input("당신의 나이를 입력하세요: "))
+parents = str(input("부모님의 동의를 얻어 근로 계약을 스스로 체결 했나요?(Y/N): "))
+time = int(input("1일 몇시간 근로를 하였나요? : "))
+harful = str(input("유해하거나 위험한 업소인가요?(Y/N): "))
+money = str(input("임금을 매월 1회 이상 일정한 날짜에 근로자 본인에게 지급하나요?"))
+if 15 <= age < 18 and parents == "Y" and time <= 7 and harful == "N" and money == "Y":
+  print("당신은 근로가 가능합니다")
+  print("당신은 1일 7시간 이내 , 1주 35시간 이내 근로가능합니다.")
+  print("당신은 또한 4시간 근로에 30분 이상의 휴식시간을 가질 권리가 있습니다.")
+elif age >= 18 and parents == "Y" and time <= 7 and harful == "N" and money == "Y":
+  print(" 1주 간의 근로시간은 휴게시간을 제외하고 40시간을 초과할 수 없습니다.")
+  print(" 1일의 근로시간은 휴게시간을 제외하고 8시간을 초과할 수 없습니다.")
+else:
+  print("당신은 근로가 가능하지 않습니다.")
